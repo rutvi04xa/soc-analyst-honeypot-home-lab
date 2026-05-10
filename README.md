@@ -84,3 +84,15 @@ Configured Network Security Group (NSG) inbound rules to allow all traffic, enab
 </p>
 
 **Fig 1.3** – NSG inbound rule configured to allow unrestricted traffic for honeypot simulation.
+
+---
+
+### 4. Windows Firewall Disabled
+
+Disabled Windows Defender Firewall inside the virtual machine across Domain, Private, and Public profiles to allow unrestricted inbound traffic for attack simulation in the honeypot environment.
+
+<p align="center">
+  <img src="screenshots/firewall-off.png" alt="Firewall Disabled" width="900">
+</p>
+
+**Fig 1.4** – Windows Defender Firewall turned off for Domain, Private, and Public network profiles on the honeypot VM.
