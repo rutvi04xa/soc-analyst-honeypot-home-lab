@@ -96,3 +96,15 @@ Disabled Windows Defender Firewall inside the virtual machine across Domain, Pri
 </p>
 
 **Fig 1.4** – Windows Defender Firewall turned off for Domain, Private, and Public network profiles on the honeypot VM.
+
+---
+
+### 5. Failed Login Attempts (Attack Simulation)
+
+Observed failed login attempts on the honeypot virtual machine, simulating brute-force attack activity and generating security logs for analysis.
+
+<p align="center">
+  <img src="screenshots/event-viewer-4625.png" alt="Failed Login Attempts" width="900">
+</p>
+
+**Fig 1.5** – Event Viewer showing multiple failed login attempts (Event ID 4625) triggered by external access attempts.
