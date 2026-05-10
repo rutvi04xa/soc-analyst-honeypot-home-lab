@@ -1,8 +1,29 @@
 # soc-analyst-honeypot-home-lab
 
-## 🎯 Objective
+##  Objective
 
 The objective of this project is to gain hands-on experience in building a cloud-based Security Operations Center (SOC) environment using Microsoft Azure and Microsoft Sentinel. The project focuses on deploying a Windows-based honeypot virtual machine to simulate real-world cyberattacks and generate security events for analysis. It involves configuring centralized log collection through Azure Log Analytics Workspace and integrating it with Microsoft Sentinel for threat monitoring and incident detection.
 
 This lab captures security events such as failed login attempts and analyzes them using Kusto Query Language (KQL), enabling identification of malicious activity patterns. The project further enhances threat intelligence by enriching logs with GeoIP data and visualizing attack sources through an interactive attack map dashboard. This hands-on exercise strengthens practical skills in SIEM operations, threat detection, log analysis, and cloud security monitoring, which are essential for SOC Analyst and cybersecurity roles.
+
+## Skills Learned
+
+- Gained hands-on experience in cloud security monitoring using Microsoft Azure and Microsoft Sentinel, including setting up a SOC-style environment for threat detection.  
+- Worked with Windows Security Event Logs to analyze failed login attempts and investigate suspicious activity.  
+- Developed practical skills in Kusto Query Language (KQL) to query, filter, and analyze security events.  
+- Deployed and configured a Windows virtual machine in Azure and managed network security settings using NSG rules.  
+- Implemented centralized log collection using Azure Log Analytics Workspace and integrated it with Microsoft Sentinel for SIEM operations.  
+- Applied basic threat intelligence techniques by enriching logs with GeoIP data to identify attacker locations.  
+- Built an attack visualization dashboard using Sentinel Workbooks to understand attack patterns and improve incident awareness.
+
+## Tools Used
+
+- Microsoft Azure – Cloud platform used to deploy and manage virtual machines and networking resources  
+- Microsoft Sentinel – Cloud-native SIEM used for log monitoring, threat detection, and security analysis  
+- Log Analytics Workspace – Centralized log storage and analysis platform for security event data  
+- Windows 10 Virtual Machine – Used as a honeypot system to simulate real-world attack scenarios  
+- Azure Monitor Agent (AMA) – Used to collect and forward security logs to Log Analytics Workspace  
+- Kusto Query Language (KQL) – Used for querying and analyzing security logs and events  
+- GeoIP Watchlist – Used for enriching logs with geographic information of attacker IP addresses  
+- Sentinel Workbooks – Used for creating dashboards and visualizing attack patterns
 
