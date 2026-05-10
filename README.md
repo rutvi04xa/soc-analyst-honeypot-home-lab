@@ -89,7 +89,7 @@ Configured Network Security Group (NSG) inbound rules to allow all traffic, enab
 
 ### 4. Resource Group Overview
 
-Created a Resource Group in Microsoft Azure to organize and manage all resources used in the SOC lab environment, including the virtual machine, virtual network, networking components, and monitoring services.
+Created a Resource Group in Microsoft Azure to organize and manage all resources used in the SOC lab environment, including the virtual machine, virtual network and networking components.
 
 <p align="center">
   <img src="screenshots/resource-group-overview.png" alt="Resource Group Overview" width="900">
