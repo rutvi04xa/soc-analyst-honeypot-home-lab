@@ -27,3 +27,10 @@ This lab captures security events such as failed login attempts and analyzes the
 - GeoIP Watchlist – Used for enriching logs with geographic information of attacker IP addresses  
 - Sentinel Workbooks – Used for creating dashboards and visualizing attack patterns
 
+## Architecture Diagram
+
+The following diagram illustrates the SOC monitoring architecture implemented using Microsoft Azure and Microsoft Sentinel.
+
+<p align="center">
+  <img src="screenshots/architecture-diagram.png" alt="SOC Analyst Honeypot Home Lab Architecture Diagram" width="900">
+</p>
