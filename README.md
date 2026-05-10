@@ -34,3 +34,29 @@ The following diagram illustrates the SOC monitoring architecture implemented us
 <p align="center">
   <img src="screenshots/architecture-diagram.png" alt="SOC Analyst Honeypot Home Lab Architecture Diagram" width="900">
 </p>
+
+## ⚙️ STEPS
+
+---
+
+### 1. Resource Group Creation
+
+Created a new Resource Group in Microsoft Azure to organize and manage all resources used in the SOC lab.
+
+<p align="center">
+  <img src="screenshots/resource-group.png" alt="Resource Group Creation" width="900">
+</p>
+
+**Fig 1.1** – Resource group created in Microsoft Azure portal for SOC lab environment.
+
+---
+
+### 2. Virtual Machine Deployment
+
+Deployed a Windows 10 virtual machine in Microsoft Azure to act as a honeypot system for simulating attack scenarios.
+
+<p align="center">
+  <img src="screenshots/vm-creation.png" alt="Azure VM Creation" width="900">
+</p>
+
+**Fig 1.2** – Windows 10 virtual machine successfully created in Azure.
