@@ -87,7 +87,18 @@ Configured Network Security Group (NSG) inbound rules to allow all traffic, enab
 
 ---
 
-### 4. Windows Firewall Disabled
+### 4. Resource Group Overview
+
+Created a Resource Group in Microsoft Azure to organize and manage all resources used in the SOC lab environment, including the virtual machine, virtual network, networking components, and monitoring services.
+
+<p align="center">
+  <img src="screenshots/resource-group-overview.png" alt="Resource Group Overview" width="900">
+</p>
+
+**Fig 1.4** – Resource Group showing all deployed SOC lab resources.
+---
+
+### 5. Windows Firewall Disabled
 
 Disabled Windows Defender Firewall inside the virtual machine across Domain, Private, and Public profiles to allow unrestricted inbound traffic for attack simulation in the honeypot environment.
 
@@ -95,11 +106,11 @@ Disabled Windows Defender Firewall inside the virtual machine across Domain, Pri
   <img src="screenshots/firewall-off.png" alt="Firewall Disabled" width="900">
 </p>
 
-**Fig 1.4** – Windows Defender Firewall turned off for Domain, Private, and Public network profiles on the honeypot VM.
+**Fig 1.5** – Windows Defender Firewall turned off for Domain, Private, and Public network profiles on the honeypot VM.
 
 ---
 
-### 5. Failed Login Attempts (Attack Simulation)
+### 6. Failed Login Attempts (Attack Simulation)
 
 Observed failed login attempts on the honeypot virtual machine, simulating brute-force attack activity and generating security logs for analysis.
 
@@ -107,4 +118,4 @@ Observed failed login attempts on the honeypot virtual machine, simulating brute
   <img src="screenshots/event-viewer-4625.png" alt="Failed Login Attempts" width="900">
 </p>
 
-**Fig 1.5** – Event Viewer showing multiple failed login attempts (Event ID 4625) triggered by external access attempts.
+**Fig 1.6** – Event Viewer showing multiple failed login attempts (Event ID 4625) triggered by external access attempts.
