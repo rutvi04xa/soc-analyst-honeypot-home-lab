@@ -60,3 +60,27 @@ Deployed a Windows 10 virtual machine in Microsoft Azure to act as a honeypot sy
 </p>
 
 **Fig 1.2** – Windows 10 virtual machine successfully created in Azure.
+
+---
+
+### 2. Virtual Network (VNet) Creation
+
+Created a Virtual Network (VNet) to provide network isolation and support connectivity for the virtual machine within the SOC lab environment.
+
+<p align="center">
+  <img src="screenshots/vnet.png" alt="Virtual Network Creation" width="900">
+</p>
+
+**Fig 1.2** – Virtual Network created to support secure communication within the Azure SOC environment.
+
+---
+
+### 3. Network Security Group (NSG) Configuration
+
+Configured Network Security Group (NSG) inbound rules to allow all traffic, enabling simulated malicious access attempts for the honeypot environment.
+
+<p align="center">
+  <img src="screenshots/nsg-rule.png" alt="NSG Configuration" width="900">
+</p>
+
+**Fig 1.3** – NSG inbound rule configured to allow unrestricted traffic for honeypot simulation.
