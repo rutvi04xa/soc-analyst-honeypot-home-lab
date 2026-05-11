@@ -194,7 +194,7 @@ SecurityEvent
 | project TimeGenerated, Account, Computer, EventID, Activity, IpAddress
 ```
 
-<p align="center"> <img src="screenshots/kql-1.png" alt="KQL Query 1" width="900"> </p>
+<p align="center"> <img src="screenshots/KQL-3.png" alt="KQL Query 1" width="900"> </p>
 Fig 1.11.1 – Query used to identify failed login attempts (Event ID 4625).
 
 ---
@@ -208,7 +208,7 @@ SecurityEvent
 | project TimeGenerated, Account, Computer, EventID, Activity, IpAddress
 ```
 
-<p align="center"> <img src="screenshots/kql-2.png" alt="KQL Query 2" width="900"> </p>
+<p align="center"> <img src="screenshots/KQL-4.png" alt="KQL Query 2" width="900"> </p>
 Fig 1.11.2 – Query filtering failed login attempts within the last 5 minutes.
 
 ### 3. pecific Account Monitoring 
@@ -218,7 +218,7 @@ SecurityEvent
 | where Account == "\\MICHAEL"
 ```
 
-<p align="center"> <img src="screenshots/kql-3.png" alt="KQL Query 3" width="900"> </p>
+<p align="center"> <img src="screenshots/KQL-1.png" alt="KQL Query 3" width="900"> </p>
 Fig 1.11.3 – Query filtering events for a specific user account.
 
 ### 4. Account Activity with Projected Fields
@@ -229,5 +229,5 @@ SecurityEvent
 | project TimeGenerated, Account, Computer, EventID, Activity, IpAddress
 ```
 
-<p align="center"> <img src="screenshots/kql-4.png" alt="KQL Query 4" width="900"> </p>
+<p align="center"> <img src="screenshots/KQL-2.png" alt="KQL Query 4" width="900"> </p>
 Fig 1.11.4 – Structured view of account-based activity logs.
