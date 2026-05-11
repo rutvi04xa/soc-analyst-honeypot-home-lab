@@ -285,3 +285,25 @@ WindowsEvents
 
 <p align="center"> <img src="screenshots/KQL-7.png" alt="KQL Query 7 GeoIP" width="900"> </p>
 Fig 1.11.7 – End-to-end attacker tracking using GeoIP enrichment and failed login logs.
+
+### 12. GeoIP Enrichment
+
+A GeoIP watchlist was created in Microsoft Sentinel to enrich security logs with geographic information of attacker IP addresses. This enables better visibility into the origin of malicious login attempts and supports threat intelligence analysis.
+
+### 1. GeoIP Watchlist Creation
+
+<p align="center">
+<img src="screenshots/geoip-watchlist-created.png" alt="GeoIP Watchlist Created" width="900">
+</p>
+
+**Fig 1.12(a)** – GeoIP watchlist successfully created in Microsoft Sentinel.
+
+### 2. GeoIP Watchlist Preview (Data Verification)
+
+<p align="center">
+<img src="screenshots/geoip-watchlist-preview.png" alt="GeoIP Watchlist Preview" width="900">
+</p>
+
+**Fig 1.12(b)** – Preview of GeoIP watchlist showing IP addresses with corresponding geographic details (city, country, latitude, longitude).
+
+
