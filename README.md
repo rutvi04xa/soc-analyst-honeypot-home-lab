@@ -231,3 +231,57 @@ SecurityEvent
 
 <p align="center"> <img src="screenshots/KQL-2.png" alt="KQL Query 4" width="900"> </p>
 Fig 1.11.4 – Structured view of account-based activity logs.
+
+---
+
+### 5. GeoIP Enrichment – Failed Login Attempts from Specific IP
+
+```kql
+let GeoIPDB_FULL = GetWatchlist("geoip");
+
+let WindowsEvents = SecurityEvent
+| where IpAddress == "124.88.46.182"
+| where EventID == 4625
+| order by TimeGenerated desc;
+
+WindowsEvents
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
+```
+<p align="center"> <img src="screenshots/KQL-5.png" alt="KQL Query 5 GeoIP" width="900"> </p>
+Fig 1.11.5 – Failed login attempts enriched with GeoIP data for attacker IP address.
+
+### 6.  GeoIP Mapping with Location Enrichment
+
+```kql
+let GeoIPDB_FULL = GetWatchlist("geoip");
+
+let WindowsEvents = SecurityEvent
+| where IpAddress == "124.88.46.182"
+| where EventID == 4625
+| order by TimeGenerated desc;
+
+WindowsEvents
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
+| project TimeGenerated, Computer, IpAddress, cityname, countryname, latitude, longitude
+```
+
+<p align="center"> <img src="screenshots/KQL-6.png" alt="KQL Query 6 GeoIP" width="900"> </p>
+Fig 1.11.6 – Mapping attacker IP address to geographical location using GeoIP watchlist.
+
+### 7. Full Threat Location Analysis (Attacker Tracking)
+
+```kql
+let GeoIPDB_FULL = GetWatchlist("geoip");
+
+let WindowsEvents = SecurityEvent
+| where IpAddress == "124.88.46.182"
+| where EventID == 4625
+| order by TimeGenerated desc;
+
+WindowsEvents
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
+| project TimeGenerated, Computer, AttackerIP = IpAddress, cityname, countryname, latitude, longitude
+```
+
+<p align="center"> <img src="screenshots/KQL-7.png" alt="KQL Query 7 GeoIP" width="900"> </p>
+Fig 1.11.7 – End-to-end attacker tracking using GeoIP enrichment and failed login logs.
