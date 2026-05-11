@@ -143,3 +143,21 @@ Connected the Log Analytics Workspace with Microsoft Sentinel to enable SIEM-bas
 </p>
 
 **Fig 1.8** – Microsoft Sentinel successfully integrated with Log Analytics Workspace for centralized security monitoring.
+
+---
+
+### 8. Azure Monitor Agent (AMA) Configuration
+
+Configured the Azure Monitor Agent (AMA) and Data Collection Rule (DCR) to forward Windows security event logs from the honeypot virtual machine to the Log Analytics Workspace.
+
+<p align="center">
+  <img src="screenshots/ama-configuration.png" alt="Azure Monitor Agent Configuration" width="900">
+</p>
+<p align="center">
+  <img src="screenshots/ama-configuration.png" alt="Azure Monitor Agent Configuration" width="900">
+</p>
+<p align="center">
+  <img src="screenshots/ama-configuration.png" alt="Azure Monitor Agent Configuration" width="900">
+</p>
+
+**Fig 1.8** – Azure Monitor Agent and Data Collection Rule configured for centralized security log collection.
