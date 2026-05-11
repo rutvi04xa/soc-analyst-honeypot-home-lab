@@ -127,7 +127,7 @@ Observed failed login attempts on the honeypot virtual machine, simulating brute
 Created a Log Analytics Workspace to collect and store security event logs from the virtual machine for centralized monitoring and analysis.
 
 <p align="center">
-  <img src="screenshots/log-analytics.png" alt="Log Analytics Workspace" width="900">
+  <img src="screenshots/creating-log-repository.png" alt="Log Analytics Workspace" width="900">
 </p>
 
 **Fig 1.7** – Log Analytics Workspace configured for centralized log storage and log ingestion from the SOC environment.
@@ -139,7 +139,7 @@ Created a Log Analytics Workspace to collect and store security event logs from 
 Connected the Log Analytics Workspace with Microsoft Sentinel to enable SIEM-based monitoring, threat detection, and security analytics.
 
 <p align="center">
-  <img src="screenshots/sentinel-setup.png" alt="Microsoft Sentinel Setup" width="900">
+  <img src="screenshots/connected-log-workspace-to-microsoft-sentinel.png" alt="Microsoft Sentinel Setup" width="900">
 </p>
 
 **Fig 1.8** – Microsoft Sentinel successfully integrated with Log Analytics Workspace for centralized security monitoring.
