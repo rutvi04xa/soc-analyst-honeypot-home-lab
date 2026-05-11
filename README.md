@@ -179,3 +179,55 @@ Verified that Windows Security Event Logs from the honeypot virtual machine are 
 </p>
 
 **Fig 1.10** – Windows Security Events successfully received in Log Analytics Workspace (proof of log ingestion from the VM).
+
+### 11. KQL Log Analysis
+
+Executed multiple Kusto Query Language (KQL) queries in Microsoft Sentinel / Log Analytics Workspace to analyze failed login attempts and detect suspicious activity on the honeypot virtual machine.
+
+---
+
+### 1. Failed Login Attempts (Event ID 4625)
+
+```kql
+SecurityEvent
+| where EventID == 4625
+| project TimeGenerated, Account, Computer, EventID, Activity, IpAddress
+```
+
+<p align="center"> <img src="screenshots/kql-1.png" alt="KQL Query 1" width="900"> </p>
+Fig 1.11.1 – Query used to identify failed login attempts (Event ID 4625).
+
+---
+
+### 2. Recent Failed Login Attempts (Last 5 Minutes)
+
+```kql
+SecurityEvent
+| where EventID == 4625
+| where TimeGenerated > ago(5m)
+| project TimeGenerated, Account, Computer, EventID, Activity, IpAddress
+```
+
+<p align="center"> <img src="screenshots/kql-2.png" alt="KQL Query 2" width="900"> </p>
+Fig 1.11.2 – Query filtering failed login attempts within the last 5 minutes.
+
+### 3. pecific Account Monitoring 
+
+```kql
+SecurityEvent
+| where Account == "\\MICHAEL"
+```
+
+<p align="center"> <img src="screenshots/kql-3.png" alt="KQL Query 3" width="900"> </p>
+Fig 1.11.3 – Query filtering events for a specific user account.
+
+### 4. Account Activity with Projected Fields
+
+```kql
+SecurityEvent
+| where Account == "\\MICHAEL"
+| project TimeGenerated, Account, Computer, EventID, Activity, IpAddress
+```
+
+<p align="center"> <img src="screenshots/kql-4.png" alt="KQL Query 4" width="900"> </p>
+Fig 1.11.4 – Structured view of account-based activity logs.
