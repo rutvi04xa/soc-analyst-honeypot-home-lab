@@ -167,3 +167,15 @@ Configured the Azure Monitor Agent (AMA) and Data Collection Rule (DCR) to forwa
 </p>
 
  **Fig 1.9** – Azure Monitor Agent and Data Collection Rule configured for centralized security log collection.
+
+---
+
+### 10. Windows Security Logs Ingestion
+
+Verified that Windows Security Event Logs from the honeypot virtual machine are successfully being ingested into the Log Analytics Workspace after configuring the Azure Monitor Agent and Data Collection Rule.
+
+<p align="center">
+  <img src="screenshots/log-security-events.png" alt="Windows Security Logs in Log Analytics" width="900">
+</p>
+
+**Fig 1.10** – Windows Security Events successfully received in Log Analytics Workspace (proof of log ingestion from the VM).
