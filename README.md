@@ -306,4 +306,62 @@ A GeoIP watchlist was created in Microsoft Sentinel to enrich security logs with
 
 **Fig 1.12(b)** – Preview of GeoIP watchlist showing IP addresses with corresponding geographic details (city, country, latitude, longitude).
 
+### 13. Attack Map Visualization
 
+Created a Microsoft Sentinel Workbook to visualize global attack sources on an interactive geographic map using GeoIP-enriched failed login data.
+
+---
+
+### 1. Workbook Configuration Using JSON
+
+Within Microsoft Sentinel:
+
+- Create a new **Workbook**
+- Remove the default pre-populated elements
+- Add a new **Query** element
+- Open the **Advanced Editor**
+- Paste the following JSON configuration to generate the attack map visualization
+
+```json
+{
+  "type": 3,
+  "content": {
+    "version": "KqlItem/1.0",
+    "query": "let GeoIPDB_FULL = _GetWatchlist(\"geoip\");\nlet WindowsEvents = SecurityEvent;\nWindowsEvents | where EventID == 4625\n| order by TimeGenerated desc\n| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)\n| summarize FailureCount = count() by IpAddress, latitude, longitude, cityname, countryname\n| project FailureCount, AttackerIp = IpAddress, latitude, longitude, city = cityname, country = countryname,\nfriendly_location = strcat(cityname, \" (\", countryname, \")\");",
+    "size": 3,
+    "timeContext": {
+      "durationMs": 2592000000
+    },
+    "queryType": 0,
+    "resourceType": "microsoft.operationalinsights/workspaces",
+    "visualization": "map",
+    "mapSettings": {
+      "locInfo": "LatLong",
+      "locInfoColumn": "countryname",
+      "latitude": "latitude",
+      "longitude": "longitude",
+      "sizeSettings": "FailureCount",
+      "sizeAggregation": "Sum",
+      "opacity": 0.8,
+      "labelSettings": "friendly_location",
+      "legendMetric": "FailureCount",
+      "legendAggregation": "Sum",
+      "itemColorSettings": {
+        "nodeColorField": "FailureCount",
+        "colorAggregation": "Sum",
+        "type": "heatmap",
+        "heatmapPalette": "greenRed"
+      }
+    }
+  },
+  "name": "query - 0"
+}
+```
+
+### 2. Attack Map Visualization
+
+<p align="center">
+<img src="screenshots/attack-map.png" alt="Attack Map Visualization" width="900">
+</p>
+
+**Fig 1.13** – Interactive attack map displaying geographic distribution of failed login attempts against the honeypot virtual machine.
