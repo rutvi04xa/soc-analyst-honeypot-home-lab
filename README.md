@@ -293,7 +293,7 @@ A GeoIP watchlist was created in Microsoft Sentinel to enrich security logs with
 ### 1. GeoIP Watchlist Creation
 
 <p align="center">
-<img src="screenshots/geoip-watchlist-created.png" alt="GeoIP Watchlist Created" width="900">
+<img src="screenshots/watchlist-created.png" alt="GeoIP Watchlist Created" width="900">
 </p>
 
 **Fig 1.12(a)** – GeoIP watchlist successfully created in Microsoft Sentinel.
@@ -301,7 +301,7 @@ A GeoIP watchlist was created in Microsoft Sentinel to enrich security logs with
 ### 2. GeoIP Watchlist Preview (Data Verification)
 
 <p align="center">
-<img src="screenshots/geoip-watchlist-preview.png" alt="GeoIP Watchlist Preview" width="900">
+<img src="screenshots/watchlist-preview.png" alt="GeoIP Watchlist Preview" width="900">
 </p>
 
 **Fig 1.12(b)** – Preview of GeoIP watchlist showing IP addresses with corresponding geographic details (city, country, latitude, longitude).
